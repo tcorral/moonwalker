@@ -24,8 +24,12 @@ module.exports = function (grunt){
         var sessions = { length: 0 };
         var errors = [];
         this.files.forEach(function (file){
-            var maxSessions = file.src.length * options.desiredCapabilities.length;
-            file.src.forEach(function (filepath){
+            var lenFiles = file.src.length;
+            var files = file.src.filter(function (filepath){
+                return fs.lstatSync(filepath).isFile();
+            });
+            var maxSessions = files.length * options.desiredCapabilities.length;
+            files.forEach(function (filepath){
                 var suiteName = path.basename(filepath);
                 temp.open('moonwalker_', function (err, info){
                     if(!err){

@@ -1,7 +1,7 @@
 module.exports = function (grunt) {
     grunt.initConfig({
         moonwalker: {
-            error: {
+            success: {
                 src: [
                     'tests/SeleneseSearchSuccess'
                 ],
@@ -17,7 +17,7 @@ module.exports = function (grunt) {
                     ]
                 }
             },
-            success: {
+            error: {
                 src: [
                     'tests/SeleneseSearch'
                 ],
@@ -32,7 +32,21 @@ module.exports = function (grunt) {
                         }
                     ]
                 }
-            }
+            },
+            all: {
+                src: [ 'tests/**'],
+                options: {
+                    selenium: {
+                        host: 'localhost',
+                        port: 4444
+                    },
+                    desiredCapabilities: [
+                        {
+                            browserName: 'firefox'
+                        }
+                    ]
+                }
+            },
         }
     });
 
