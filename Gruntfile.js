@@ -5,6 +5,7 @@ module.exports = function (grunt) {
                 src: [
                     'tests/SeleneseSearchSuccess'
                 ],
+                filter: 'isFile',
                 options: {
                     selenium: {
                         host: 'localhost',
@@ -21,6 +22,7 @@ module.exports = function (grunt) {
                 src: [
                     'tests/SeleneseSearch'
                 ],
+                filter: 'isFile',
                 options: {
                     selenium: {
                         host: 'localhost',
@@ -35,6 +37,7 @@ module.exports = function (grunt) {
             },
             all: {
                 src: [ 'tests/**'],
+                filter: 'isFile',
                 options: {
                     selenium: {
                         host: 'localhost',
@@ -51,5 +54,5 @@ module.exports = function (grunt) {
     });
 
     grunt.loadTasks('tasks');
-    grunt.registerTask('test', ['moonwalker']);
+    grunt.registerTask('test', ['moonwalker:all']);
 };
