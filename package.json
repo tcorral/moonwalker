@@ -1,0 +1,26 @@
+{
+  "name": "moonwalker",
+  "version": "0.0.1",
+  "description": "Tool to read Selenium IDE HTML files and launch them.",
+  "main": "Gruntfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "keywords": [
+    "grunt-plugin",
+    "selenium"
+  ],
+  "author": "Tomas Corral",
+  "license": "Apache 2.0",
+  "dependencies": {
+    "selenium-html-js-converter": "^0.2.9",
+    "temp": "^0.8.1",
+    "wd-sync": "^1.2.5"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}
