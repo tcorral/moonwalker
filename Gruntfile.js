@@ -15,7 +15,8 @@ module.exports = function (grunt) {
                         {
                             browserName: 'firefox'
                         }
-                    ]
+                    ],
+                    reporter: ['junit', 'tests/junit_report.xml']
                 }
             },
             error: {
@@ -32,7 +33,8 @@ module.exports = function (grunt) {
                         {
                             browserName: 'firefox'
                         }
-                    ]
+                    ],
+                    reporter: ['junit', 'tests/junit_report.xml']
                 }
             },
             all: {
@@ -47,12 +49,13 @@ module.exports = function (grunt) {
                         {
                             browserName: 'firefox'
                         }
-                    ]
+                    ],
+                    reporter: ['junit', 'tests/junit_report.xml']
                 }
-            },
+            }
         }
     });
 
     grunt.loadTasks('tasks');
-    grunt.registerTask('test', ['moonwalker:all']);
+    grunt.registerTask('test', ['moonwalker:error']);
 };

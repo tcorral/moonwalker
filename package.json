@@ -1,7 +1,7 @@
 {
   "name": "moonwalker",
   "version": "0.0.1",
-  "description": "Tool to read Selenium IDE HTML files and launch them.",
+  "description": "Tool to launch Selenium IDE HTML files tests",
   "main": "Gruntfile.js",
   "directories": {
     "test": "tests"
