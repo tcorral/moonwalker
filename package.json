@@ -1,6 +1,6 @@
 {
   "name": "moonwalker",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Tool to launch Selenium IDE HTML files tests",
   "main": "src/index.js",
   "scripts": {
