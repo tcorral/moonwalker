@@ -116,9 +116,9 @@ module.exports = function (grunt){
                                             reporter({testcase: suiteName});
                                             jsTest(browser);
                                         }catch(er){
-                                            error = 'The test ' + suiteName + ' in ' + capability.browserName + ' with sessionId [' + sessionId  + '] has failed due to: ' + er.message;
+                                            error = 'The test ' + suiteName + ' in ' + capability.browserName + ' has failed due to: ' + er.message;
                                             reporter({ error: error});
-                                            errors.push(error)
+                                            errors.push(error);
                                             grunt.verbose.error(error);
                                             sessions['_' + sessionId].quit();
                                             delete sessions['_' + sessionId];
@@ -132,12 +132,6 @@ module.exports = function (grunt){
                                             sessions.length = 0;
                                             reporter({testDone: true});
                                             done();
-                                            //if(errors.length === 0){
-                                            //    reporter({testDone: true});
-                                            //    done();
-                                            //}else{
-                                            //    grunt.fatal(getFormattedError(errors) + '\r\n' + JSON.stringify(errors, null, '\t'));
-                                            //}
                                         }
                                     });
                                 });
